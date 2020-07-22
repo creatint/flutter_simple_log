@@ -1,22 +1,26 @@
 # simple_log
 
-A simple package to upload logs to [avenge.cn](https://avenge.cn).
+简单的日志扩展程序，可以把日志上传到[avenge.cn](https://avenge.cn)。
 
-[avenge.cn](https://avenge.cn) is a log management platform, welcome to try.
 
-[中文](README_zh-CN.md)
+[avenge.cn](https://avenge.cn)是一个日志管理平台，欢迎使用~
 
-## Getting Started
+[English](README.md)
 
-1. Register for free
+## 开始
+
+1. 注册账号
 
    [https://avenge.cn/register](https://avenge.cn/register)
-2. Install
+2. 创建应用
+   [https://avenge.cn/home/resources/apps/new](https://avenge.cn/home/resources/apps/new)
+   
+3. 安装扩展
    ```yaml
    dependencies:
        simple_log: ^0.0.1
    ```
-3. Usage
+4. 用法
    ```dart
    import 'package:simple_log/simple_log.dart';
 
@@ -28,33 +32,34 @@ A simple package to upload logs to [avenge.cn](https://avenge.cn).
      runApp(MyApp());
    }
     ```
-4. Other usages
+5. 其他用法
     ```dart
    SimpleLog logger = SimpleLog(appId: yourAppId, appKey: 'yourAppKey');
    SimpleLog logger2 = SimpleLog(key: 'key2',appId: yourAppId, appKey: 'yourAppKey');
    
-   // default key is "default"
+   // key默认值为"default"
    assert(logger == SimpleLog(key: 'default'));
    
-   // debug level
+   // debug等级
    logger.d("hello world");
    
-   // info level
+   // info等级 
    logger.i("hello world");
    
-   // warning level
+   // warning等级 
    logger.w({"a":1,"b":"c"}); 
    
-   // error level log will be printed on the local terminal
+   // 设置本地打印日志的等级，error等级的日志会被打印在本地终端
    logger2.setPrintLevels([Level.Error]);
    
-   // error level
-   // this log will be printed on the local terminal
+   // error等级
+   // 此日志会被打印在本地终端
    logger2.e(logger); 
    
+   // 取消上传
    logger2.setUploadLevels(null);
    
-   // fatal level
-   // this log will be printed on the local terminal but will not be uploaded
+   // fatal等级
+   // 此日志会被打印在本地终端，但不会上传
    logger2.f(["p1", "p2"]); 
     ```
