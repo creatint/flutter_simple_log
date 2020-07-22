@@ -29,6 +29,8 @@ A simple way to upload logs to [avenge.cn](https://avenge.cn).
    }
     ```
 4. Other usages
+
+   [simple_logger_example.dart](example/simple_logger_example.dart)
     ```dart
    SimpleLog logger = SimpleLog(appId: 1, appKey: 'yourAppKey');
    SimpleLog logger2 = SimpleLog(key: 'key2',appId: 2, appKey: 'yourAppKey2');
