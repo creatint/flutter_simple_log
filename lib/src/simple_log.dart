@@ -120,7 +120,7 @@ class SimpleLog {
     if (_uploadLevels == null ||
         _uploadLevels.isEmpty ||
         !_uploadLevels.contains(level)) {
-      return;
+      return null;
     }
 
     var res =
