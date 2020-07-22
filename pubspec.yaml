@@ -1,7 +1,6 @@
 name: simple_log
-description: A simple package to upload logs.
+description: A simple way to upload logs.
 version: 0.0.1
-author: creatint@163.com
 homepage: https://github.com/creatint/flutter_simple_log
 
 environment:

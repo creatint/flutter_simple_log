@@ -1,6 +1,6 @@
 # simple_log
 
-A simple package to upload logs to [avenge.cn](https://avenge.cn).
+A simple way to upload logs to [avenge.cn](https://avenge.cn).
 
 [avenge.cn](https://avenge.cn) is a log management platform, welcome to try.
 
