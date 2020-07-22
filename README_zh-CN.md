@@ -34,8 +34,8 @@
     ```
 5. 其他用法
     ```dart
-   SimpleLog logger = SimpleLog(appId: yourAppId, appKey: 'yourAppKey');
-   SimpleLog logger2 = SimpleLog(key: 'key2',appId: yourAppId, appKey: 'yourAppKey');
+   SimpleLog logger = SimpleLog(appId: 1, appKey: 'yourAppKey');
+   SimpleLog logger2 = SimpleLog(key: 'key2',appId: 2, appKey: 'yourAppKey2');
    
    // key默认值为"default"
    assert(logger == SimpleLog(key: 'default'));

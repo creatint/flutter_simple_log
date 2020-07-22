@@ -30,8 +30,8 @@ A simple way to upload logs to [avenge.cn](https://avenge.cn).
     ```
 4. Other usages
     ```dart
-   SimpleLog logger = SimpleLog(appId: yourAppId, appKey: 'yourAppKey');
-   SimpleLog logger2 = SimpleLog(key: 'key2',appId: yourAppId, appKey: 'yourAppKey');
+   SimpleLog logger = SimpleLog(appId: 1, appKey: 'yourAppKey');
+   SimpleLog logger2 = SimpleLog(key: 'key2',appId: 2, appKey: 'yourAppKey2');
    
    // default key is "default"
    assert(logger == SimpleLog(key: 'default'));
