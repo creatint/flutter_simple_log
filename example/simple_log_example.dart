@@ -2,7 +2,8 @@ import 'package:simple_log/simple_log.dart';
 
 void main() {
   SimpleLog logger = new SimpleLog(appId: 1, appKey: 'yourAppKey1');
-  SimpleLog logger2 = new SimpleLog(key: 'key2', appId: 2, appKey: 'yourAppKey2');
+  SimpleLog logger2 =
+      new SimpleLog(key: 'key2', appId: 2, appKey: 'yourAppKey2');
 
   // default key is "default"
   assert(logger == new SimpleLog(key: 'default'));

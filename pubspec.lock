@@ -238,7 +238,7 @@ packages:
       name: shelf_packages_handler
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.0.4"
+    version: "1.0.5"
   shelf_static:
     dependency: transitive
     description:

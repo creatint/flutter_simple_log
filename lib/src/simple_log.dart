@@ -14,7 +14,7 @@ class SimpleLog {
   List<Level> _printLevels;
   List<Level> _uploadLevels;
 
-  static Map<String, SimpleLog> _cache = Map();
+  static final Map<String, SimpleLog> _cache = Map<String, SimpleLog>();
 
   /// Get singleton instance by [key]
   ///

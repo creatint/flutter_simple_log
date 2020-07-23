@@ -1,3 +1,7 @@
+## 1.0.5 - 2020/7/23.
+
+* Fix some bugs.
+
 ## 1.0.4 - 2020/7/23.
 
 * Remove flutter dependency.
