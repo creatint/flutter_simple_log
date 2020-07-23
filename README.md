@@ -1,8 +1,7 @@
 # simple_log
+A simple way to upload logs to remote server, support all platforms, dart-native, dart-js, flutter-android, flutter-ios, flutter-web, flutter-windows, flutter-linux, flutter-mac.
 
-A simple way to upload logs to [avenge.cn](https://avenge.cn).
-
-[avenge.cn](https://avenge.cn) is a log management platform, welcome to try.
+Logs will be uploaded to [avenge.cn](https://avenge.cn), which is a simple  Log-Management-System, welcome to try ^_^
 
 [中文](README_zh-CN.md)
 
@@ -14,7 +13,7 @@ A simple way to upload logs to [avenge.cn](https://avenge.cn).
 2. Install
    ```yaml
    dependencies:
-       simple_log: ^1.0.6
+       simple_log: ^1.0.7
    ```
 3. Usage
    ```dart

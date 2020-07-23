@@ -1,9 +1,8 @@
 # simple_log
 
-简单的日志扩展程序，可以把日志上传到[avenge.cn](https://avenge.cn)。
+一种非常方便快捷的日志收集方式，支持所有平台：dart-native、dart-js、flutter-android、flutter-ios、flutter-web、flutter-windows、flutter-linux、flutter-mac。
 
-
-[avenge.cn](https://avenge.cn)是一个日志管理平台，欢迎使用~
+日志会被上传到[avenge.cn](https://avenge.cn)，这是一个简单的日志管理系统，欢迎试用^_^
 
 [English](README.md)
 
@@ -18,7 +17,7 @@
 3. 安装扩展
    ```yaml
    dependencies:
-       simple_log: ^1.0.6
+       simple_log: ^1.0.7
    ```
 4. 用法
    ```dart
