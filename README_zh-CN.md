@@ -17,7 +17,7 @@
 3. 安装扩展
    ```yaml
    dependencies:
-       simple_log: ^1.0.8
+       simple_log: ^1.0.9
    ```
 4. 用法
    ```dart
@@ -38,17 +38,17 @@
    SimpleLog logger = SimpleLog(appId: 123, appKey: 'yourAppKey');
    SimpleLog logger2 = SimpleLog(key: 'key2',appId: 456, appKey: 'yourAppKey2');
    
-   // key默认值为"default"
+   // key默认值为'default'
    assert(logger == SimpleLog(key: 'default'));
    
    // debug等级
-   logger.d("hello world");
+   logger.d('hello world');
    
    // info等级 
-   logger.i("hello world");
+   logger.i('hello world');
    
    // warning等级 
-   logger.w({"a":1,"b":"c"}); 
+   logger.w({'a':1,'b':'c'}); 
    
    // 设置本地打印日志的等级，error等级的日志会被打印在本地终端
    logger2.setPrintLevels([Level.Error]);
@@ -62,5 +62,5 @@
    
    // fatal等级
    // 此日志会被打印在本地终端，但不会上传
-   logger2.f(["p1", "p2"]); 
+   logger2.f(['p1', 'p2']); 
     ```

@@ -21,7 +21,7 @@ void main() {
       var res2 = await logger.d([1, 2, 3], flag: 'flag123');
       expect(res2, true);
 
-      var res3 = await logger.d({"a": 1, "b": "c"}, user: 'abc');
+      var res3 = await logger.d({'a': 1, 'b': 'c'}, user: 'abc');
       expect(res3, true);
 
       var res4 = await logger.d(Object());

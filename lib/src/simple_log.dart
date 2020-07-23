@@ -88,12 +88,12 @@ class SimpleLog {
   Future<http.Response> _report(
       {Level level, Object object, String user, String flag}) {
     var body = {
-      "app_id": _appId,
-      "app_key": _appKey,
-      "user": user ?? this._user,
-      "flag": flag ?? this._flag,
-      "level": level.index,
-      "data": null
+      'app_id': _appId,
+      'app_key': _appKey,
+      'user': user ?? this._user,
+      'flag': flag ?? this._flag,
+      'level': level.index,
+      'data': null
     };
     if (object is String) {
       body['data'] = object;
@@ -103,7 +103,7 @@ class SimpleLog {
       body['data'] = object.toString();
     }
     return _client.post('$_apiPrefix/log',
-        headers: {"content-type": "application/json"}, body: jsonEncode(body));
+        headers: {'content-type': 'application/json'}, body: jsonEncode(body));
   }
 
   Future<dynamic> _log(Level level, dynamic object,
@@ -146,7 +146,7 @@ class SimpleLog {
   /// ### Example
   ///
   /// ```
-  /// logger.d("hello world", user: "user1", flag: "login");
+  /// logger.d('hello world', user: 'user1', flag: 'login');
   /// ```
   Future<dynamic> d(dynamic object, {String user, String flag}) async {
     return _log(Level.Debug, object, user: user, flag: flag);
@@ -161,7 +161,7 @@ class SimpleLog {
   /// ### Example
   ///
   /// ```
-  /// logger.i("hello world", user: "user1", flag: "login");
+  /// logger.i('hello world', user: 'user1', flag: 'login');
   /// ```
   Future<dynamic> i(dynamic object, {String user, String flag}) async {
     return _log(Level.Info, object, user: user, flag: flag);
@@ -176,7 +176,7 @@ class SimpleLog {
   /// ### Example
   ///
   /// ```
-  /// logger.w("hello world", user: "user1", flag: "login");
+  /// logger.w('hello world', user: 'user1', flag: 'login');
   /// ```
   Future<dynamic> w(dynamic object, {String user, String flag}) async {
     return _log(Level.Warning, object, user: user, flag: flag);
@@ -191,7 +191,7 @@ class SimpleLog {
   /// ### Example
   ///
   /// ```
-  /// logger.e("hello world", user: "user1", flag: "login");
+  /// logger.e('hello world', user: 'user1', flag: 'login');
   /// ```
   Future<dynamic> e(dynamic object, {String user, String flag}) async {
     return _log(Level.Error, object, user: user, flag: flag);
@@ -206,7 +206,7 @@ class SimpleLog {
   /// ### Example
   ///
   /// ```
-  /// logger.f("hello world", user: "user1", flag: "login");
+  /// logger.f('hello world', user: 'user1', flag: 'login');
   /// ```
   Future<dynamic> f(dynamic object, {String user, String flag}) async {
     return _log(Level.Fatal, object, user: user, flag: flag);
