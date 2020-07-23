@@ -18,6 +18,6 @@
 
 * The first version.
 
-## 0.0.2 - 2020/7/22.
+## 0.0.1 - 2020/7/22.
 
 * The beta version.
