@@ -1,3 +1,7 @@
+## 1.2.0 - 2020/7/23.
+
+* Add api to set receiving server.
+
 ## 1.1.1 - 2020/7/23.
 
 * Change README_zh-CN.md.

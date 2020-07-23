@@ -2,7 +2,9 @@
 
 最简单的日志收集方式，支持所有平台。
 
-日志会被上传到[avenge.cn](https://avenge.cn)，这是一个简单的日志管理系统，欢迎试用^_^
+默认情况下，日志会被上传到[avenge.cn](https://avenge.cn)，这是一个简单的日志管理系统，欢迎试用^_^
+
+你也可以设置自己的服务器来接收日志。
 
 ## 开始
 
@@ -16,7 +18,7 @@
 3. 安装扩展
    ```yaml
    dependencies:
-       simple_log: ^1.1.1
+       simple_log: ^1.2.0
    ```
 4. 用法
    ```dart
@@ -63,3 +65,41 @@
    // 此日志会被打印在本地终端，但不会上传
    logger2.f(['p1', 'p2']); 
     ```
+   
+## 构建接收日志服务器
+
+  
+*SimpleLog.apiPrefix* 的默认值是 *https://avenge.cn/api* ，你可以指定自己的服务器来接收日志。
+```dart
+var logger = SimpleLog(apiPrefix: 'your own server');
+```
+  
+当提交一个日志时，它会向服务器发送一个json：
+```json
+{
+  "app_id": 123,
+  "app_key": "appKey123",
+  "user": "user123",
+  "flag": "flag123",
+  "level": 2,
+  "data": {}
+}
+```
+*data* 是这个日志的内容，可以是字符串，也可以是json。
+  
+然后，服务器会返回json：
+```json
+{
+  "code": 0,
+  "message": "success"
+}
+```
+如果 *code* 值是 0 ，意味着提交成功。
+
+如果发生了错误，将会是：
+```json
+{
+  "code": -1,
+  "message": "something wrong ..."
+}
+```
