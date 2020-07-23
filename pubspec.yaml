@@ -1,6 +1,6 @@
 name: simple_log
-description: A simple way to upload logs to [avenge.cn](https://avenge.cn). [avenge.cn](https://avenge.cn) is a log management platform, welcome to try.
-version: 1.0.2
+description: A simple way to upload logs to avenge.cn. avenge.cn is a log management platform, welcome to try.
+version: 1.0.3
 author: creatint <creatint@163.com>
 homepage: https://github.com/creatint/flutter_simple_log
 

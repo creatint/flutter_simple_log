@@ -1,3 +1,7 @@
+## [1.0.3] - 2020/7/23.
+
+* Optimize points.
+
 ## [1.0.2] - 2020/7/23.
 
 * Optimize points.

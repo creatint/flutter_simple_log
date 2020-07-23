@@ -18,7 +18,7 @@
 3. 安装扩展
    ```yaml
    dependencies:
-       simple_log: ^1.0.2
+       simple_log: ^1.0.3
    ```
 4. 用法
    ```dart
