@@ -189,7 +189,7 @@ packages:
       name: package_config
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1"
   package_resolver:
     dependency: transitive
     description:
@@ -238,7 +238,7 @@ packages:
       name: shelf_packages_handler
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1"
   shelf_static:
     dependency: transitive
     description:
@@ -294,14 +294,14 @@ packages:
       name: string_scanner
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1"
   term_glyph:
     dependency: transitive
     description:
       name: term_glyph
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1"
   test:
     dependency: "direct dev"
     description:
@@ -350,7 +350,7 @@ packages:
       name: web_socket_channel
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1"
   webkit_inspection_protocol:
     dependency: transitive
     description:

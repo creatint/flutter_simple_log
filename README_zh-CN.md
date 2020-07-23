@@ -4,20 +4,19 @@
 
 日志会被上传到[avenge.cn](https://avenge.cn)，这是一个简单的日志管理系统，欢迎试用^_^
 
-[English](README.md)
-
 ## 开始
 
 1. 注册账号
 
    [https://avenge.cn/register](https://avenge.cn/register)
 2. 创建应用
+
    [https://avenge.cn/home/resources/apps/new](https://avenge.cn/home/resources/apps/new)
    
 3. 安装扩展
    ```yaml
    dependencies:
-       simple_log: ^1.1.0
+       simple_log: ^1.1.1
    ```
 4. 用法
    ```dart

@@ -5,19 +5,21 @@ The simplest way to upload logs to remote server, support all platforms.
 
 Logs will be uploaded to [avenge.cn](https://avenge.cn), which is a simple Log-Management-System, welcome to try ^_^
 
-[中文](README_zh-CN.md)
-
 ## Getting Started
 
 1. Register for free
 
    [https://avenge.cn/register](https://avenge.cn/register)
-2. Install
+2. Create app
+
+   [https://avenge.cn/home/resources/apps/new](https://avenge.cn/home/resources/apps/new)
+
+3. Install
    ```yaml
    dependencies:
-       simple_log: ^1.1.0
+       simple_log: ^1.1.1
    ```
-3. Usage
+4. Usage
    ```dart
    import 'package:simple_log/simple_log.dart';
 
@@ -29,7 +31,7 @@ Logs will be uploaded to [avenge.cn](https://avenge.cn), which is a simple Log-M
      runApp(MyApp());
    }
     ```
-4. Other usages
+5. Other usages
 
    [simple_logger_example.dart](example/simple_logger_example.dart)
     ```dart

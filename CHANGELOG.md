@@ -1,3 +1,7 @@
+## 1.1.1 - 2020/7/23.
+
+* Change README_zh-CN.md.
+
 ## 1.1.0 - 2020/7/23.
 
 * Fix some bugs.
