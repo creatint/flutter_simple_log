@@ -37,7 +37,7 @@ class SimpleLog {
         .._flag = flag;
       return _cache[key];
     }
-    _cache[key] = SimpleLog._internal(
+    _cache[key] = new SimpleLog._internal(
         appId: appId,
         appKey: appKey,
         user: user,
@@ -122,7 +122,7 @@ class SimpleLog {
 
     var res =
         await _report(level: level, object: object, user: user, flag: flag);
-    if (res.statusCode == 20) {
+    if (res.statusCode == 200) {
       try {
         var data = jsonDecode(res.body);
         if (data['code'] == 0) {
