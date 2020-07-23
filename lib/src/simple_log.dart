@@ -90,8 +90,8 @@ class SimpleLog {
     var body = {
       'app_id': _appId,
       'app_key': _appKey,
-      'user': user ?? this._user,
-      'flag': flag ?? this._flag,
+      'user': user ?? _user,
+      'flag': flag ?? _flag,
       'level': level.index,
       'data': null
     };

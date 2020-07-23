@@ -15,7 +15,7 @@ Logs will be uploaded to [avenge.cn](https://avenge.cn), which is a simple Log-M
 2. Install
    ```yaml
    dependencies:
-       simple_log: ^1.0.9
+       simple_log: ^1.1.0
    ```
 3. Usage
    ```dart
