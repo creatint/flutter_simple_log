@@ -23,6 +23,7 @@ void main() {
   // this log will be printed on the local terminal
   logger2.e(logger);
 
+  // cancel upload logs
   logger2.setUploadLevels(null);
 
   // fatal level
