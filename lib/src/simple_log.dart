@@ -1,12 +1,9 @@
 import 'dart:convert';
-import 'dart:io';
 import 'package:http/http.dart' as http;
 
 enum Level { Debug, Info, Warning, Error, Fatal }
 
 const String _apiPrefix = 'https://avenge.cn/api';
-//const String apiPrefix = 'http://192.168.101.43:8012/api';
-//const String apiPrefix = 'http://localhost:8012/api';
 
 class SimpleLog {
   int _appId;
@@ -26,12 +23,12 @@ class SimpleLog {
   /// ```
   factory SimpleLog(
       {String key = 'default',
-        int appId,
-        String appKey,
-        String user,
-        String flag,
-        List<Level> printLevels,
-        List<Level> uploadLevels: Level.values}) {
+      int appId,
+      String appKey,
+      String user,
+      String flag,
+      List<Level> printLevels,
+      List<Level> uploadLevels: Level.values}) {
     if (_cache.containsKey(key)) {
       _cache[key]
         ..setPrintLevels(printLevels)
@@ -52,11 +49,11 @@ class SimpleLog {
 
   SimpleLog._internal(
       {int appId,
-        String appKey,
-        String user,
-        String flag,
-        List<Level> printLevels,
-        List<Level> uploadLevels}) {
+      String appKey,
+      String user,
+      String flag,
+      List<Level> printLevels,
+      List<Level> uploadLevels}) {
     _appId = appId;
     _appKey = appKey;
     _user = user;
@@ -105,7 +102,7 @@ class SimpleLog {
     } else {
       body['data'] = object.toString();
     }
-    return _client.post('${_apiPrefix}/log',
+    return _client.post('$_apiPrefix/log',
         headers: {"content-type": "application/json"}, body: jsonEncode(body));
   }
 
@@ -124,8 +121,8 @@ class SimpleLog {
     }
 
     var res =
-    await _report(level: level, object: object, user: user, flag: flag);
-    if (res.statusCode == HttpStatus.ok) {
+        await _report(level: level, object: object, user: user, flag: flag);
+    if (res.statusCode == 20) {
       try {
         var data = jsonDecode(res.body);
         if (data['code'] == 0) {
