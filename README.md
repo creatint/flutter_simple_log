@@ -14,7 +14,7 @@ A simple way to upload logs to [avenge.cn](https://avenge.cn).
 2. Install
    ```yaml
    dependencies:
-       simple_log: ^1.0.0
+       simple_log: ^1.0.1
    ```
 3. Usage
    ```dart
