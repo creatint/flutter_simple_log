@@ -3,9 +3,8 @@ import 'package:http/http.dart' as http;
 
 enum Level { Debug, Info, Warning, Error, Fatal }
 
-const String _apiPrefix = 'https://avenge.cn/api';
-
 class SimpleLog {
+  String _apiPrefix;
   int _appId;
   String _appKey;
   http.Client _client;
@@ -21,6 +20,38 @@ class SimpleLog {
   /// ```dart
   /// var logger = SimpleLog();
   /// ```
+  ///
+  /// The default value of [apiPrefix] is 'https://avenge.cn/api', you can set your own server to receive logs.
+  ///
+  /// When it reports logs, it will post a json to remote server:
+  /// ```json
+  /// {
+  ///   "app_id": 123,
+  ///   "app_key": "appKey123",
+  ///   "user": "user123",
+  ///   "flag": "flag123",
+  ///   "level": 2,
+  ///   "data": {}
+  /// }
+  /// ```
+  /// **data** is the content of log, it can be string or json.
+  ///
+  /// Then, the remote server will give back a json:
+  /// ```json
+  /// {
+  ///   "code": 0,
+  ///   "message": "success",
+  /// }
+  /// ```
+  /// If **code** is **0**, it means success.
+  ///
+  /// If something went wrong, it would be:
+  /// ```json
+  /// {
+  ///   "code": -1,
+  ///   "message": "something wrong ...",
+  /// }
+  /// ```
   factory SimpleLog(
       {String key = 'default',
       int appId,
@@ -28,13 +59,17 @@ class SimpleLog {
       String user,
       String flag,
       List<Level> printLevels,
-      List<Level> uploadLevels = Level.values}) {
+      List<Level> uploadLevels = Level.values,
+      String apiPrefix = 'https://avenge.cn/api'}) {
     if (_cache.containsKey(key)) {
       _cache[key]
         ..setPrintLevels(printLevels)
         ..setUploadLevels(uploadLevels)
+        .._appId = appId
+        .._appKey = appKey
         .._user = user
-        .._flag = flag;
+        .._flag = flag
+        .._apiPrefix = apiPrefix;
       return _cache[key];
     }
     _cache[key] = SimpleLog._internal(
@@ -43,7 +78,8 @@ class SimpleLog {
         user: user,
         flag: flag,
         printLevels: printLevels,
-        uploadLevels: uploadLevels);
+        uploadLevels: uploadLevels,
+        apiPrefix: apiPrefix);
     return _cache[key];
   }
 
@@ -53,13 +89,15 @@ class SimpleLog {
       String user,
       String flag,
       List<Level> printLevels,
-      List<Level> uploadLevels}) {
+      List<Level> uploadLevels,
+      String apiPrefix}) {
     _appId = appId;
     _appKey = appKey;
     _user = user;
     _flag = flag;
     _printLevels = printLevels;
     _uploadLevels = uploadLevels;
+    _apiPrefix = apiPrefix;
     _client = http.Client();
   }
 
