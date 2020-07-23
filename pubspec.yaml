@@ -1,6 +1,6 @@
 name: simple_log
 description:
-  A simple way to upload logs to remote server, support all platforms, dart-native, dart-js, flutter-android, flutter-ios, flutter-web, flutter-windows, flutter-linux, flutter-mac.
+  The simplest way to upload logs to remote server, support all platforms.
 version: 1.0.8
 author: creatint <creatint@163.com>
 homepage: https://github.com/creatint/flutter_simple_log

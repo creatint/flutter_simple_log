@@ -1,6 +1,6 @@
 # simple_log
 
-一种非常方便快捷的日志收集方式，支持所有平台：dart-native、dart-js、flutter-android、flutter-ios、flutter-web、flutter-windows、flutter-linux、flutter-mac。
+最简单的日志收集方式，支持所有平台。
 
 日志会被上传到[avenge.cn](https://avenge.cn)，这是一个简单的日志管理系统，欢迎试用^_^
 
