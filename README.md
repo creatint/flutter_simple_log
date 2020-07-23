@@ -14,7 +14,7 @@ A simple way to upload logs to [avenge.cn](https://avenge.cn).
 2. Install
    ```yaml
    dependencies:
-       simple_log: ^1.0.5
+       simple_log: ^1.0.6
    ```
 3. Usage
    ```dart
@@ -32,8 +32,8 @@ A simple way to upload logs to [avenge.cn](https://avenge.cn).
 
    [simple_logger_example.dart](example/simple_logger_example.dart)
     ```dart
-   SimpleLog logger = SimpleLog(appId: 1, appKey: 'yourAppKey');
-   SimpleLog logger2 = SimpleLog(key: 'key2',appId: 2, appKey: 'yourAppKey2');
+   SimpleLog logger = new SimpleLog(appId: 123, appKey: 'yourAppKey');
+   SimpleLog logger2 = new SimpleLog(key: 'key2',appId: 456, appKey: 'yourAppKey2');
    
    // default key is "default"
    assert(logger == SimpleLog(key: 'default'));
@@ -54,6 +54,7 @@ A simple way to upload logs to [avenge.cn](https://avenge.cn).
    // this log will be printed on the local terminal
    logger2.e(logger); 
    
+   // cancel upload logs
    logger2.setUploadLevels(null);
    
    // fatal level

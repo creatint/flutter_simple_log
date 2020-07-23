@@ -14,7 +14,7 @@ class SimpleLog {
   List<Level> _printLevels;
   List<Level> _uploadLevels;
 
-  static final Map<String, SimpleLog> _cache = Map<String, SimpleLog>();
+  static final Map<String, SimpleLog> _cache = {};
 
   /// Get singleton instance by [key]
   ///
@@ -28,7 +28,7 @@ class SimpleLog {
       String user,
       String flag,
       List<Level> printLevels,
-      List<Level> uploadLevels: Level.values}) {
+      List<Level> uploadLevels = Level.values}) {
     if (_cache.containsKey(key)) {
       _cache[key]
         ..setPrintLevels(printLevels)
