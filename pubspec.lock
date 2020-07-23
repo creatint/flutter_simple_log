@@ -238,7 +238,7 @@ packages:
       name: shelf_packages_handler
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.0.7"
+    version: "1.0.8"
   shelf_static:
     dependency: transitive
     description:
@@ -294,7 +294,7 @@ packages:
       name: string_scanner
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.0.7"
+    version: "1.0.8"
   term_glyph:
     dependency: transitive
     description:

@@ -37,7 +37,7 @@ class SimpleLog {
         .._flag = flag;
       return _cache[key];
     }
-    _cache[key] = new SimpleLog._internal(
+    _cache[key] = SimpleLog._internal(
         appId: appId,
         appKey: appKey,
         user: user,
@@ -87,7 +87,7 @@ class SimpleLog {
 
   Future<http.Response> _report(
       {Level level, Object object, String user, String flag}) {
-    Map<String, dynamic> body = {
+    var body = {
       "app_id": _appId,
       "app_key": _appKey,
       "user": user ?? this._user,

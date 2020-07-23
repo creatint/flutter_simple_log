@@ -13,7 +13,7 @@ Logs will be uploaded to [avenge.cn](https://avenge.cn), which is a simple  Log-
 2. Install
    ```yaml
    dependencies:
-       simple_log: ^1.0.7
+       simple_log: ^1.0.8
    ```
 3. Usage
    ```dart
@@ -31,8 +31,8 @@ Logs will be uploaded to [avenge.cn](https://avenge.cn), which is a simple  Log-
 
    [simple_logger_example.dart](example/simple_logger_example.dart)
     ```dart
-   SimpleLog logger = new SimpleLog(appId: 123, appKey: 'yourAppKey');
-   SimpleLog logger2 = new SimpleLog(key: 'key2',appId: 456, appKey: 'yourAppKey2');
+   SimpleLog logger = SimpleLog(appId: 123, appKey: 'yourAppKey');
+   SimpleLog logger2 = SimpleLog(key: 'key2',appId: 456, appKey: 'yourAppKey2');
    
    // default key is "default"
    assert(logger == SimpleLog(key: 'default'));
