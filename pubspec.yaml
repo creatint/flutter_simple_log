@@ -1,14 +1,14 @@
 name: simple_log
 description:
   The simplest way to upload logs to remote server, support all platforms.
-version: 1.2.0
+version: 1.2.1
 homepage: https://github.com/creatint/flutter_simple_log
 
 environment:
   sdk: ">=2.5.0 <3.0.0"
 
 dependencies:
-  http: ^0.12.1
+  dio: ^3.0.9
 
 dev_dependencies:
   test: ^1.6.0

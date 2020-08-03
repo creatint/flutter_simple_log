@@ -1,3 +1,7 @@
+## 1.2.1 - 2020/8/03.
+
+* Change the default domain of api.
+
 ## 1.2.0 - 2020/7/23.
 
 * Add api to set receiving server.

@@ -1,9 +1,12 @@
 Language: [English](README.md) | [中文](README_zh-CN.md)
 
 # simple_log
+![Pub Version](https://img.shields.io/pub/v/simple_log?style=flat-square)
+![Platform](https://img.shields.io/badge/platform-flutter%7Cflutter%20web%7Cdart%20vm-brightgreen)
+
 The simplest way to upload logs to remote server, support all platforms.
 
-By default, logs will be uploaded to [avenge.cn](https://avenge.cn), which is a simple Log-Management-System, welcome to try ^_^
+By default, logs will be uploaded to [avenge.app](https://avenge.app), which is a simple Log-Management-System, welcome to try ^_^
 
 You can set your own server to receive logs.
 
@@ -11,15 +14,15 @@ You can set your own server to receive logs.
 
 1. Register for free
 
-   [https://avenge.cn/register](https://avenge.cn/register)
+   [https://avenge.app/register](https://avenge.app/register)
 2. Create app
 
-   [https://avenge.cn/home/resources/apps/new](https://avenge.cn/home/resources/apps/new)
+   [https://avenge.app/home/resources/apps/new](https://avenge.app/home/resources/apps/new)
 
 3. Install
    ```yaml
    dependencies:
-       simple_log: ^1.2.0
+       simple_log: ^1.2.1
    ```
 4. Usage
    ```dart
@@ -70,7 +73,7 @@ You can set your own server to receive logs.
 ## Build receive server
 
   
-   The default value of [SimpleLog.apiPrefix] is 'https://avenge.cn/api', you can set your own server to receive logs.
+   The default value of [SimpleLog.apiPrefix] is 'https://avenge.app/api', you can set your own server to receive logs.
    ```dart
    var logger = SimpleLog(apiPrefix: 'your own server');
    ```
@@ -104,3 +107,9 @@ You can set your own server to receive logs.
      "message": "something wrong ..."
    }
    ```
+
+## 全部项目
+| 插件                                                     | 状态                                                       | 描述                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [simple_log](https://github.com/creatint/flutter_simple_log) | ![Pub Version](https://img.shields.io/pub/v/simple_log?style=flat-square) | 最简单的日志收集方式，支持所有平台 |
+| [simple_update](https://github.com/creatint/flutter_simple_update) | ![Pub Version](https://img.shields.io/pub/v/simple_update?style=flat-square) | 最简单的应用更新方式，支持所有平台 |

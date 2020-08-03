@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:http/http.dart' as http;
+import 'package:dio/dio.dart';
 
 enum Level { Debug, Info, Warning, Error, Fatal }
 
@@ -7,7 +7,7 @@ class SimpleLog {
   String _apiPrefix;
   int _appId;
   String _appKey;
-  http.Client _client;
+  Dio _dio;
   String _user;
   String _flag;
   List<Level> _printLevels;
@@ -21,7 +21,7 @@ class SimpleLog {
   /// var logger = SimpleLog();
   /// ```
   ///
-  /// The default value of [apiPrefix] is *https://avenge.cn/api*, you can set your own server to receive logs.
+  /// The default value of [apiPrefix] is *https://avenge.app/api*, you can set your own server to receive logs.
   /// ```dart
   /// var logger = SimpleLog(apiPrefix: 'your own server');
   /// ```
@@ -63,7 +63,7 @@ class SimpleLog {
       String flag,
       List<Level> printLevels,
       List<Level> uploadLevels = Level.values,
-      String apiPrefix = 'https://avenge.cn/api'}) {
+      String apiPrefix = 'https://avenge.app/api'}) {
     if (_cache.containsKey(key)) {
       _cache[key]
         ..setPrintLevels(printLevels)
@@ -101,7 +101,10 @@ class SimpleLog {
     _printLevels = printLevels;
     _uploadLevels = uploadLevels;
     _apiPrefix = apiPrefix;
-    _client = http.Client();
+    _dio = Dio(BaseOptions(
+        baseUrl: _apiPrefix,
+        contentType: 'application/json',
+        followRedirects: true));
   }
 
   /// Set levels which will be printed on the local terminal.
@@ -115,7 +118,7 @@ class SimpleLog {
     _printLevels = levels;
   }
 
-  /// Set levels which will be uploaded to avenge.cn.
+  /// Set levels which will be uploaded to avenge.app.
   ///
   /// ### Example
   ///
@@ -126,7 +129,7 @@ class SimpleLog {
     _uploadLevels = levels;
   }
 
-  Future<http.Response> _report(
+  Future<Response> _report(
       {Level level, Object object, String user, String flag}) {
     var body = {
       'app_id': _appId,
@@ -143,17 +146,14 @@ class SimpleLog {
     } else {
       body['data'] = object.toString();
     }
-    return _client.post('$_apiPrefix/log',
-        headers: {'content-type': 'application/json'}, body: jsonEncode(body));
+    return _dio.post('/log', data: FormData.fromMap(body));
   }
 
   Future<dynamic> _log(Level level, dynamic object,
       {String user, String flag}) async {
     if (_printLevels != null &&
         _printLevels.isNotEmpty &&
-        _printLevels.contains(level)) {
-      print(object);
-    }
+        _printLevels.contains(level)) {}
 
     if (_uploadLevels == null ||
         _uploadLevels.isEmpty ||
@@ -165,7 +165,7 @@ class SimpleLog {
         await _report(level: level, object: object, user: user, flag: flag);
     if (res.statusCode == 200) {
       try {
-        var data = jsonDecode(res.body);
+        var data = res.data;
         if (data['code'] == 0) {
           return true;
         }

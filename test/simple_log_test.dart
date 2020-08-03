@@ -8,8 +8,8 @@ void main() {
 
     setUp(() {
       logger = SimpleLog(
-          appId: 1,
-          appKey: 'g4rehwe8fq4qe9rgh4q',
+          appId: 8,
+          appKey: 'g4rehwe8fq4qeh4q123',
           user: 'user haha',
           flag: 'flag hahaha');
     });

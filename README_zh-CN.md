@@ -1,8 +1,10 @@
 # simple_log
+![Pub Version](https://img.shields.io/pub/v/simple_log?style=flat-square)
+![Platform](https://img.shields.io/badge/platform-flutter%7Cflutter%20web%7Cdart%20vm-brightgreen)
 
 最简单的日志收集方式，支持所有平台。
 
-默认情况下，日志会被上传到[avenge.cn](https://avenge.cn)，这是一个简单的日志管理系统，欢迎试用^_^
+默认情况下，日志会被上传到[avenge.app](https://avenge.app)，这是一个简单的日志管理系统，欢迎试用^_^
 
 你也可以设置自己的服务器来接收日志。
 
@@ -10,15 +12,15 @@
 
 1. 注册账号
 
-   [https://avenge.cn/register](https://avenge.cn/register)
+   [https://avenge.app/register](https://avenge.app/register)
 2. 创建应用
 
-   [https://avenge.cn/home/resources/apps/new](https://avenge.cn/home/resources/apps/new)
+   [https://avenge.app/home/resources/apps/new](https://avenge.app/home/resources/apps/new)
    
 3. 安装扩展
    ```yaml
    dependencies:
-       simple_log: ^1.2.0
+       simple_log: ^1.2.1
    ```
 4. 用法
    ```dart
@@ -69,7 +71,7 @@
 ## 构建接收日志服务器
 
   
-*SimpleLog.apiPrefix* 的默认值是 *https://avenge.cn/api* ，你可以指定自己的服务器来接收日志。
+*SimpleLog.apiPrefix* 的默认值是 *https://avenge.app/api* ，你可以指定自己的服务器来接收日志。
 ```dart
 var logger = SimpleLog(apiPrefix: 'your own server');
 ```
@@ -103,3 +105,9 @@ var logger = SimpleLog(apiPrefix: 'your own server');
   "message": "something wrong ..."
 }
 ```
+
+## 全部项目
+| 插件                                                     | 状态                                                       | 描述                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [simple_log](https://github.com/creatint/flutter_simple_log) | ![Pub Version](https://img.shields.io/pub/v/simple_log?style=flat-square) | 最简单的日志收集方式，支持所有平台 |
+| [simple_update](https://github.com/creatint/flutter_simple_update) | ![Pub Version](https://img.shields.io/pub/v/simple_update?style=flat-square) | 最简单的应用更新方式，支持所有平台 |
