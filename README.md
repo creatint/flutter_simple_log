@@ -22,7 +22,7 @@ You can set your own server to receive logs.
 3. Install
    ```yaml
    dependencies:
-       simple_log: ^1.2.1
+       simple_log: ^1.2.2
    ```
 4. Usage
    ```dart

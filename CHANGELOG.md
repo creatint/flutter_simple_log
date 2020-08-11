@@ -1,3 +1,7 @@
+## 1.2.2 - 2020/8/12.
+
+* Change README.md and README_zh-CN.md
+
 ## 1.2.1 - 2020/8/03.
 
 * Change the default domain of api.
