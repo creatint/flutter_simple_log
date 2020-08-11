@@ -17,7 +17,7 @@ You can set your own server to receive logs.
    [https://avenge.app/register](https://avenge.app/register)
 2. Create app
 
-   [https://avenge.app/home/resources/apps/new](https://avenge.app/home/resources/apps/new)
+   [https://avenge.app/developer/resources/apps/new](https://avenge.app/developer/resources/apps/new)
 
 3. Install
    ```yaml

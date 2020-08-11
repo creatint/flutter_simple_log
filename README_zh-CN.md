@@ -15,7 +15,7 @@
    [https://avenge.app/register](https://avenge.app/register)
 2. 创建应用
 
-   [https://avenge.app/home/resources/apps/new](https://avenge.app/home/resources/apps/new)
+   [https://avenge.app/developer/resources/apps/new](https://avenge.app/developer/resources/apps/new)
    
 3. 安装扩展
    ```yaml
@@ -109,5 +109,5 @@ var logger = SimpleLog(apiPrefix: 'your own server');
 ## 全部项目
 | 插件                                                     | 状态                                                       | 描述                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [simple_log](https://github.com/creatint/flutter_simple_log) | ![Pub Version](https://img.shields.io/pub/v/simple_log?style=flat-square) | 最简单的日志收集方式，支持所有平台 |
-| [simple_update](https://github.com/creatint/flutter_simple_update) | ![Pub Version](https://img.shields.io/pub/v/simple_update?style=flat-square) | 最简单的应用更新方式，支持所有平台 |
+| [simple_log](https://github.com/creatint/flutter_simple_log) | ![Pub Version](https://img.shields.io/pub/v/simple_log?style=flat-square) | The simplest way to upload logs to remote server, support all platforms |
+| [simple_update](https://github.com/creatint/flutter_simple_update) | ![Pub Version](https://img.shields.io/pub/v/simple_update?style=flat-square) | The simplest way to update your app, support all platforms |
