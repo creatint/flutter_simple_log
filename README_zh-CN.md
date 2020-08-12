@@ -15,12 +15,12 @@
    [https://avenge.app/register](https://avenge.app/register)
 2. 创建应用
 
-   [https://avenge.app/developer/resources/apps/new](https://avenge.app/developer/resources/apps/new)
+   [https://avenge.app/developer/resources/app-apps/new](https://avenge.app/developer/resources/app-apps/new)
    
 3. 安装扩展
    ```yaml
    dependencies:
-       simple_log: ^1.2.2
+       simple_log: ^1.2.3
    ```
 4. 用法
    ```dart

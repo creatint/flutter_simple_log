@@ -17,12 +17,12 @@ You can set your own server to receive logs.
    [https://avenge.app/register](https://avenge.app/register)
 2. Create app
 
-   [https://avenge.app/developer/resources/apps/new](https://avenge.app/developer/resources/apps/new)
+   [https://avenge.app/developer/resources/app-apps/new](https://avenge.app/developer/resources/app-apps/new)
 
 3. Install
    ```yaml
    dependencies:
-       simple_log: ^1.2.2
+       simple_log: ^1.2.3
    ```
 4. Usage
    ```dart
@@ -111,5 +111,5 @@ You can set your own server to receive logs.
 ## 全部项目
 | 插件                                                     | 状态                                                       | 描述                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [simple_log](https://github.com/creatint/flutter_simple_log) | ![Pub Version](https://img.shields.io/pub/v/simple_log?style=flat-square) | 最简单的日志收集方式，支持所有平台 |
-| [simple_update](https://github.com/creatint/flutter_simple_update) | ![Pub Version](https://img.shields.io/pub/v/simple_update?style=flat-square) | 最简单的应用更新方式，支持所有平台 |
+| [simple_log](https://github.com/creatint/flutter_simple_log) | ![Pub Version](https://img.shields.io/pub/v/simple_log?style=flat-square) | The simplest way to upload logs to remote server, support all platforms |
+| [simple_update](https://github.com/creatint/flutter_simple_update) | ![Pub Version](https://img.shields.io/pub/v/simple_update?style=flat-square) | The simplest way to update your app, support all platforms |
